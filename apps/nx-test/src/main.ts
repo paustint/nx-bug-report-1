@@ -1,9 +1,12 @@
 import express from 'express';
+import { join } from 'path';
 
 const host = process.env.HOST ?? 'localhost';
 const port = process.env.PORT ? Number(process.env.PORT) : 3000;
 
 const app = express();
+
+app.use('/assets', express.static(join(__dirname, './assets')));
 
 app.get('/', (req, res) => {
   res.send({ message: 'Hello API' });

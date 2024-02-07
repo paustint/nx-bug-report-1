@@ -2,7 +2,10 @@
   "name": "@nx-test/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx serve nx-test",
+    "build": "nx build nx-test"
+  },
   "private": true,
   "devDependencies": {
     "@nx/esbuild": "18.0.2",
